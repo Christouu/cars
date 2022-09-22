@@ -39,22 +39,6 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//get all regions
-
-// router.get("/regions", async (req, res) => {
-//   try {
-//     const regions = await Cars.distinct("region");
-//     //distinct returns all unique values in region field, like new Set()
-
-//     res.status(200).json(regions);
-//   } catch (error) {
-//     res.status(500).json(error);
-//   }
-// });
-
-//Here I am taking all regions from the Cars db.
-//If you want to use  from Region db use the other request. if you want from Car db use this comment the other request
-
 //create region
 router.post("/createRegion", async (req, res) => {
   const region = new Regions({
@@ -69,6 +53,7 @@ router.post("/createRegion", async (req, res) => {
   }
 });
 
+// get regions
 router.get("/regions", async (req, res) => {
   try {
     const regions = await Regions.find({});
