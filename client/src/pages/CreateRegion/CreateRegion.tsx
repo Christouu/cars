@@ -1,19 +1,19 @@
-import "./CreateCars.scss";
+import "./CreateRegion.scss";
 
-import CarForm from "../../components/CarForm/CarForm";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import RegionForm from "../../components/RegionForm/RegionForm";
 
-const CreateCars = () => {
+const CreateRegion = () => {
   return (
     <>
       <Header />
       <div className="create">
-        <CarForm />
+        <RegionForm />
       </div>
       <Footer />
     </>
   );
 };
 
-export default CreateCars;
+export default CreateRegion;

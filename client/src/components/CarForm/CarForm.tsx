@@ -2,9 +2,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./Form.scss";
+import "./CarForm.scss";
 
-const Form = () => {
+const CarForm = () => {
   const [brand, setBrand] = useState("");
   const [region, setRegion] = useState("");
   const [regions, setRegions] = useState([]);
@@ -35,9 +35,7 @@ const Form = () => {
   useEffect(() => {
     const getRegions = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:5001/api/cars/regions`
-        );
+        const response = await axios.get(`http://localhost:5001/api/regions`);
 
         setRegions(response.data);
       } catch (error) {
@@ -83,4 +81,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default CarForm;

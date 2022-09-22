@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import carRouter from "./routes/cars.js";
+import regionRouter from "./routes/regions.js";
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/cars", carRouter);
+app.use("/api/regions", regionRouter);
 
 app.listen(process.env.PORT || 5001, () => {
   console.log("Server is running on port 5001");

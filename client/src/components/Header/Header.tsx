@@ -8,8 +8,11 @@ const Header = () => {
         <Link to={"/"} style={{ textDecoration: "none" }}>
           <li className="link">Home</li>
         </Link>
-        <Link to={"/create"} style={{ textDecoration: "none" }}>
+        <Link to={"/createCar"} style={{ textDecoration: "none" }}>
           <li className="link">Create Car</li>
+        </Link>
+        <Link to={"/createRegion"} style={{ textDecoration: "none" }}>
+          <li className="link">Create Region</li>
         </Link>
       </ul>
     </div>
